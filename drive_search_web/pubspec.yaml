@@ -1,0 +1,12 @@
+name: drive_search_web
+version: 0.1.0
+author: Dart Team
+description: Example of accessing the Google Drive API using Dart in the Browser.
+environment:
+  sdk: '>=1.6.0 <2.0.0'
+dependencies:
+  browser: any
+  googleapis:
+    path: ../../googleapis
+  googleapis_auth:
+    path: ../../googleapis_auth

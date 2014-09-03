@@ -1,0 +1,11 @@
+name: cloudstorage_upload_download_service_account
+version: 0.1.0
+author: Dart Team
+description: Example of accessing the Google Drive API using Dart from the commandline.
+environment:
+  sdk: '>=1.6.0 <2.0.0'
+dependencies:
+  googleapis:
+    path: ../../googleapis
+  googleapis_auth:
+    path: ../../googleapis_auth

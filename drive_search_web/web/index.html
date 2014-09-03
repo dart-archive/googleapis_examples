@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2014, the Dart project authors.  Please see the AUTHORS file
+for details. All rights reserved. Use of this source code is governed by a
+BSD-style license that can be found in the LICENSE file.
+-->
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Accessing Google Drive with Dart</title>
+  </head>
+ 
+  <body>
+    <h1>Accessing Google Drive with Dart.</h1>
+    <button id="login_button">Initializing ...</button>
+    <p></p>
+    <div>
+      Please select the document types you want to list:<br/>
+      <div>
+        <select id="document_type" disabled="true">
+          <option value="pdf">PDF documents</option>
+          <option value="text">Text documents</option>
+          <option value="docs">Docs</option>
+          <option value="spreadsheets">Spreadsheets</option>
+          <option value="slides">Presentations</option>
+          <option value="all">All documents</option>
+        </select>
+        <button id="list_button" disabled="true">List</button>
+      </div>
+    </div>
+    <p></p>
+    <div id="file_list"></div>
+
+    <script type="application/dart" src="index.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
