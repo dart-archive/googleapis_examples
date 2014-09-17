@@ -1,0 +1,12 @@
+name: customsearch_browser_apikey
+version: 0.1.0
+author: Dart Team
+description: >
+  Example of accessing the Custom Search API using Dart. It demonstrates
+  searching on pub.dartlang.org.
+environment:
+  sdk: '>=1.6.0 <2.0.0'
+dependencies:
+  googleapis: ">=0.1.0 <0.2.0"
+  googleapis_auth: ">=0.1.1 <0.2.0"
+  browser: any

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>index</title>
+  </head>
+  <body>
+    <h1>Use Custom Search API in dart to search for pub packages.</h1>
+    <div>
+      Please insert a search query and press Search:
+      <input type="text" id="search_text"></input>
+      <button id="search_button" disabled="true">Search</button>
+    </div>
+  
+    <div id="results"></div>
+    
+    <script type="application/dart" src="index.dart"></script>
+    <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
