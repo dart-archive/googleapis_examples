@@ -13,7 +13,7 @@ import 'package:googleapis/customsearch/v1.dart' as search;
 final customSearchId = '009011925481577436976:h931xn2j7o0';
 
 // This is the API Key obtained from the Google Developers Console.
-final apiKey = 'AIzaSyCQK0Z1nSTf3PCVUEz4rX5CKjLqaP4gtmE';
+final apiKey = '<please-fill-in>';
 
 class Package {
   final String title;
