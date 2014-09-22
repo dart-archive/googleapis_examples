@@ -44,7 +44,7 @@ Future authorizedClient(ButtonElement loginButton, auth.ClientId id, scopes) {
       // inside an event handler (if a user action triggered a popup it will
       // usually not be blocked).
       // We use the loginButton for this.
-      loginButton.text = 'Please click for authorization.';
+      loginButton.text = 'Authorize';
       return loginButton.onClick.first.then((_) {
         return flow.clientViaUserConsent(forceUserConsent: true);
       });
@@ -60,7 +60,7 @@ Future<List<drive.File>> searchTextDocuments(drive.DriveApi api,
                                              String query) {
   var docs = [];
   Future next(String token) {
-    // The API call will only return a subset of the results. It is possible
+    // The API call returns only a subset of the results. It is possible
     // to query through the whole result set via "paging".
     return api.files.list(q: query, pageToken: token, maxResults: max)
         .then((results) {
@@ -99,7 +99,7 @@ main() {
     loginButton.disabled = true;
     selection.disabled = false;
     listButton.disabled = false;
-    loginButton.text = 'You are authorized.';
+    loginButton.text = 'You are authorized';
 
     var api = new drive.DriveApi(client);
 
