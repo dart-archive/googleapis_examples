@@ -33,7 +33,7 @@ Future authorizedClient(ButtonElement loginButton, auth.ClientId id, scopes) {
       .then((auth.BrowserOAuth2Flow flow) {
     // Try getting credentials without user consent.
     // This will succeed if the user already gave consent for this application.
-    return flow.clientViaUserConsent(forceUserConsent: false).catchError((_) {
+    return flow.clientViaUserConsent(immediate: true).catchError((_) {
       // Ask the user for consent.
       //
       // Asking for consent will create a popup window where the user has to
@@ -46,7 +46,7 @@ Future authorizedClient(ButtonElement loginButton, auth.ClientId id, scopes) {
       // We use the loginButton for this.
       loginButton.text = 'Authorize';
       return loginButton.onClick.first.then((_) {
-        return flow.clientViaUserConsent(forceUserConsent: true);
+        return flow.clientViaUserConsent(immediate: false);
       });
     }, test: (error) => error is auth.UserConsentException);
   });
