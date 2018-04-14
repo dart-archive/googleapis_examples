@@ -9,8 +9,7 @@ In order to run this sample you need to replace "<please fill in>" in
 Google Developers Console.
 
 More information about how to obtain a Client ID can be found on the
-[googleapis_auth]
-(https://github.com/dart-lang/googleapis_auth/blob/master/README.md) repository.
+[googleapis_auth](https://github.com/dart-lang/googleapis_auth/blob/master/README.md) repository.
 In order to run the below example it is necessary to set the
 "JavaScript Origins" settings to "http://localhost:8080" for the Client ID.
 

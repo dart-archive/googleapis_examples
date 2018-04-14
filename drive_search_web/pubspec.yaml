@@ -6,5 +6,5 @@ environment:
   sdk: '>=1.6.0 <2.0.0'
 dependencies:
   browser: any
-  googleapis: ">=0.1.0 <0.2.0"
-  googleapis_auth: ">=0.2.0 <0.3.0"
+  googleapis: any
+  googleapis_auth: any
