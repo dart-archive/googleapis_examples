@@ -7,7 +7,6 @@ import 'dart:io';
 
 import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:googleapis/storage/v1.dart' as storage;
-import 'package:googleapis/common/common.dart' show DownloadOptions, Media;
 
 // Obtain the service account credentials from the Google Developers Console by
 // creating new OAuth credentials of application type "Service account".
@@ -36,7 +35,7 @@ Future uploadFile(storage.StorageApi api,
   // We create a `Media` object with a `Stream` of bytes and the length of the
   // file. This media object is passed to the API call via `uploadMedia`.
   var localFile = new File(file);
-  var media = new Media(localFile.openRead(), localFile.lengthSync());
+  var media = new storage.Media(localFile.openRead(), localFile.lengthSync());
   return api.objects.insert(null, bucket, name: object, uploadMedia: media);
 }
 
@@ -48,9 +47,9 @@ Future downloadFile(storage.StorageApi api,
   // The default for `downloadOptions` is metadata. This would only give us the
   // metadata of the Object in Cloud Storage. We specify the `FullMedia` option
   // which will return a `Media` object.
-  var options = DownloadOptions.FullMedia;
+  var options = storage.DownloadOptions.FullMedia;
   return api.objects.get(
-      bucket, object, downloadOptions: options).then((Media media) {
+      bucket, object, downloadOptions: options).then((storage.Media media) {
     var fileStream = new File(file).openWrite();
     return media.stream.pipe(fileStream);
   });

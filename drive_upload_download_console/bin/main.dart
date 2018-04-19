@@ -7,7 +7,6 @@ import 'dart:io';
 
 import 'package:http/http.dart' show Client;
 import 'package:googleapis_auth/auth_io.dart' as auth;
-import 'package:googleapis/common/common.dart' show Media, DownloadOptions;
 import 'package:googleapis/drive/v2.dart' as drive;
 
 // Obtain the client email / secret from the Google Developers Console by
@@ -31,7 +30,7 @@ Future uploadFile(drive.DriveApi api,
   // We pass a partially filled-in `drive.File` object with the title we want
   // to give our newly created file.
   var localFile = new File(file);
-  var media = new Media(localFile.openRead(), localFile.lengthSync());
+  var media = new drive.Media(localFile.openRead(), localFile.lengthSync());
   var driveFile = new drive.File()..title = name;
   return api.files.insert(driveFile, uploadMedia: media).then((drive.File f) {
     print('Uploaded $file. Id: ${f.id}');

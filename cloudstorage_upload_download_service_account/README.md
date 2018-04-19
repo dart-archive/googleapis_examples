@@ -8,8 +8,8 @@ In order to run this sample you need to replace "<please fill in>" in
 `bin/main.dart` with the service account credentials obtained form the Google
 Developers Console.
 
-More information about how to obtain these can be found on the [googleapis_auth]
-(https://github.com/dart-lang/googleapis_auth/blob/master/README.md) repository.
+More information about how to obtain these can be found on the 
+[googleapis_auth](https://github.com/dart-lang/googleapis_auth/blob/master/README.md) repository.
 
 
 Usage of the example:
